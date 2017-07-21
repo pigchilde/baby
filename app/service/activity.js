@@ -1,11 +1,11 @@
 'use strict';
 
 module.exports = app => {
-  class HomeService extends app.Service{
+  class ActivityService extends app.Service{
 
     //封装通用的请求方法
     * request(url, opts){
-      url = `${this.ctx.app.config.serviceRoot.news}${url}`;
+      url = `${this.ctx.app.config.serviceRoot.activity}${url}`;
       opts = Object.assign({
         timeout: ['30s', '30s'],
         dataType: 'json',
@@ -18,13 +18,12 @@ module.exports = app => {
     }
 
     //获取首页新闻数据
-    * news(params){
-      const result = yield this.request('/v0.1/news/', {
+    * activityIndexList(params){
+      const result = yield this.request('/v0.3/activities/hot', {
         data: params,
       });
-
+     
       this.checkSuccess(result);
-      console.log(result);
       return result.data;
     }
 
@@ -40,5 +39,5 @@ module.exports = app => {
     }
   }
 
-  return HomeService;
+  return ActivityService;
 }
