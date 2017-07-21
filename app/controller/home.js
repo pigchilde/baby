@@ -20,7 +20,7 @@ module.exports = app => {
 
 
       //获取首页论坛模块数据
-      const activityList = yield this.service.activity.forumIndex({
+      const forumIndex = yield this.service.forum.forumIndex({
         page: 1,
         size: 8,
       });

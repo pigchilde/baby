@@ -18,14 +18,13 @@ module.exports = app => {
     }
 
     //获取首页新闻数据
-    * forumIndex(params) {
-      const hotResult = yield this.request('/forums/hot', {
+    * forumIndex(params){
+      const hotResult = yield this.request('/v0.1/forums/hot', {
         data: params,
       });
-
      
       this.checkSuccess(hotResult);
-      console.log(hotResult.data);
+      console.log(hotResult.data)
       return hotResult.data;
     }
 
