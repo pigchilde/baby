@@ -1,0 +1,621 @@
+{% extends "layout.html" %}
+
+{% block body %}
+		<div class="banner-wrap">
+				<img class="banner-bg" src="/public/img/bg-banner.jpg" alt="">
+			<div class="banner swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="javascript:;" title="">
+							<img src="http://image.101.com/baby/img/super-banner.jpg" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;" title="">
+							<img src="http://image.101.com/baby/img/super-banner.jpg" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;" title="">
+							<img src="http://image.101.com/baby/img/super-banner.jpg" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;" title="">
+							<img src="http://image.101.com/baby/img/super-banner.jpg" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:;" title="">
+							<img src="http://image.101.com/baby/img/super-banner.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="pagination"></div>
+			</div>
+		</div>
+		<div class="section st1">
+			<div class="wrapper clearfix">
+				<div class="news-wrap fl">
+					<div class="head clearfix">
+						<a class="more fr" href="javascript:;" title="">全部<em>&gt;&gt;</em></a>
+						<h3 class="tit">资讯</h3>
+					</div>
+					<dl class="hot clearfix" id="hot">
+					    <dt class="fl">
+					    	<a href="http://news-web.beta.web.sdp.101.com/baby#/news/{{newsList.items[0].id}}" title="">
+									<img src="http://betacs.101.com/v0.1/download?dentryId={{newsList.items[0].thumbnail}}&size=320" alt="">
+								</a>
+					    </dt>
+					    <dd class="detail">
+					    	<h3 class="tit"><a href="http://news-web.beta.web.sdp.101.com/baby#/news/{{newsList.items[0].id}}" title="">{{newsList.items[0].title}}</a></h3>
+					    	<p class="intro">{{newsList.items[0].summary}}</p>
+					    </dd>
+					</dl>
+					<ul class="list" id="newsList">
+						{% for item in newsList.items%}
+						<li class="clearfix">
+							<a href="http://news-web.beta.web.sdp.101.com/baby#/news/{{item.id}}" title="{{item.title}}">
+								<em class="num">1</em>
+								<span class="fr">{{item.create_time}}</span>
+								<h3 class="tit">{{item.title}}</h3>
+							</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="proj-wrap fr">
+					<div class="head clearfix">
+						<a class="more fr" href="javascript:;" title="">全部<em>&gt;&gt;</em></a>
+						<h3 class="tit">专题</h3>
+					</div>
+					<ul class="list clearfix" id="topic">
+					{% if activityList.items.length > 0%} 
+						{% for item in activityList.items%}
+						<li>
+							<a href="javascript:;" title="">
+								<img src="./pic/pic.jpg" alt="">
+							</a>
+						</li>
+						{% endfor %}
+					{% else %}
+						<li>最近没有热门专题活动，敬请期待~</li>
+					{% endif %}
+					</ul>
+				</div>
+				<i class="abs cloud cloud1"></i>
+				<i class="abs cloud cloud2"></i>
+				<i class="abs cloud cloud3"></i>
+			</div>
+		</div>
+		<div class="section st2">
+			<div class="wrapper">
+				<i class="abs plane plane1"></i>
+				<div class="btit st2-btit clearfix">
+					<h2>探索教学策略  关注教师成长</h2>
+					<a class="bmore fr" href="javascript:;" title="">更多 <em>&gt;&gt;</em></a>
+				</div>
+				<div class="btit-s st2btit-s clearfix">
+					<a class="deep iton" href="javascript:;" title="">职前培养</a>
+					<a href="javascript:;" title="">职后培训</a>
+				</div>
+				
+			</div>
+			<div class="swiper2-cont">
+				<div class="swiper2-nav">
+					<a class="btn-lr btn-prev btn-prevbf" href="javascript:;" title=""></a>
+   					<a class="btn-lr btn-next btn-nextbf" href="javascript:;" title=""></a>
+					<div class="swiper2 swiperbf swiper-container">
+						<div class="swiper-wrapper" id="zqpycourse">
+						    
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">学前教育理论1</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">学前教育理论2</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">学前教育理论3</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">学前教育理论4</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">学前教育理论5</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper2-nav">
+	   				<a class="btn-lr btn-prev btn-prevaf" href="javascript:;" title=""></a>
+	   				<a class="btn-lr btn-next btn-nextaf" href="javascript:;" title=""></a>
+					<div class="swiper2 swiperaf swiper-container">
+						<div class="swiper-wrapper" id="zhpxcourse">
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">222222222222222222222222222222222学前教育理论</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">222222222222222222学前教育理论</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">22222222222222222222222学前教育理论</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">2222222222222222222222222学前教育理论</a>
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title=""><img src="pic/picst2.jpg" alt=""></a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">22222222222222222222222222222学前教育理论</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section st3">
+			<div class="wrapper">
+				<i class="abs plane plane2"></i>
+				<div class="btit st3-btit clearfix">
+					<h2><span class="left-t">海量资源</span><span class="right-t">助力园所教育</span></h2>
+					<a class="bmore fr" href="javascript:;" title="">更多 <em>&gt;&gt;</em></a>
+				</div>
+				<div class="swiper3-nav">
+					<div class="swiper3 swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<ul class="st3-list clearfix">
+									<li class="longli" id="vrhot">
+										<a href="javascript:;" title="">
+											<img src="pic/picst31.jpg" alt="">
+											<p>vr</p>
+										</a>
+									</li>
+									<li id="imagehot">
+										<a href="javascript:;" title="">
+											<img src="pic/picst32.jpg" alt="">
+											<p>图片</p>
+										</a>
+									</li>
+									<li id="flashhot">
+										<a href="javascript:;" title="">
+											<img src="pic/picst32.jpg" alt="">
+											<p>动画flash</p>
+										</a>
+									</li>
+									<li id="videohot">
+										<a href="javascript:;" title="">
+											<img src="pic/picst32.jpg" alt="">
+											<p>视频</p>
+										</a>
+									</li>
+									<li id="lessonplanhot">
+										<a href="javascript:;" title="">
+											<img src="pic/picst32.jpg" alt="">
+											<p>教案</p>
+										</a>
+									</li>
+									<li id="coursewarehot">
+										<a href="javascript:;" title="">
+											<img src="pic/picst32.jpg" alt="">
+											<p>课件</p>
+										</a>
+									</li>
+									<li id="questionhot">
+										<a href="javascript:;" title="">
+											<img src="pic/picst32.jpg" alt="">
+											<p>习题</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section st4">
+			<div class="stu4bg-top"></div>
+			<div class="wrapper">
+				<i class="abs plane plane3"></i>
+				<div class="btit st4-btit clearfix">
+					<h2>早教启迪  多彩人生第一步</h2>
+					<a class="bmore fr" href="javascript:;" title="">更多 <em>&gt;&gt;</em></a>
+				</div>
+				<div class="btit-s st4btit-s clearfix">
+					<a class="deep iton4" href="javascript:;" title="">能力培养</a>
+					<a href="javascript:;" title="">素质拓展</a>
+				</div>
+			</div>
+			<div class="swiper4-cont">
+				<div class="swiper4-nav">
+					<a class="btn-lr btn-prev4 btn-prev4b" href="javascript:;" title=""></a>
+   					<a class="btn-lr btn-next4 btn-next4b" href="javascript:;" title=""></a>
+					<div class="swiper4 swiper-container swiper4b">
+						<div class="swiper-wrapper" id="nlpysource">
+							<div class="swiper-slide">
+								<ul class="st4-list clearfix" >
+									<li class="longli">
+										<a href="javascript:;" title="">
+											<img src="pic/picst41.jpg" alt="">
+											<div class="li-on">
+												<div class="mask"></div>
+												<h4>111111111111</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper4-nav">
+					<a class="btn-lr btn-prev4 btn-prev4a" href="javascript:;" title=""></a>
+   					<a class="btn-lr btn-next4 btn-next4a" href="javascript:;" title=""></a>
+					<div class="swiper4 swiper-container swiper4a">
+						<div class="swiper-wrapper"  id="sztzsource">
+							<div class="swiper-slide">
+								<ul class="st4-list clearfix">
+									<li class="longli">
+										<a href="javascript:;" title="">
+											<img src="pic/picst41.jpg" alt="">
+											<div class="li-on">
+												<div class="mask"></div>
+												<h4>222福州德慧泉儿童早教中心a</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="">
+											<img src="pic/picst42.jpg" alt="">
+											<div class="li-on">
+												<h4>福州德慧泉儿童早教中心</h4>
+												<p>德慧泉是旅日华人在福建创办的早教品牌。德慧泉全脑潜能开发教育发展中心是从事0-12岁儿童素质和智能培养，以右脑开发为重点的开发儿童身心潜能的教育研究专业机...</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="stu4bg-bot"></div>
+		</div>
+		<div class="section st5">
+			<img class="butterfly1" src="img/butterfly1.png" alt="">
+			<img class="butterfly2" src="img/butterfly2.png" alt="">
+			<img class="butterfly3" src="img/butterfly3.png" alt="">
+			<div class="wrapper">
+				<i class="abs plane plane4"></i>
+				<div class="btit st5-btit clearfix">
+					<h2>家庭教育  您永远是孩子最好的老师</h2>
+					<a class="bmore fr" href="javascript:;" title="">更多 <em>&gt;&gt;</em></a>
+				</div>
+				<div class="btit-s st5btit-s clearfix">
+					<a class="deep iton5" href="javascript:;" title="">父母课堂</a>
+					<a href="javascript:;" title="">科学育儿</a>
+				</div>
+				
+			</div>
+			<div class="swiper5-cont">
+				<div class="swiper5-nav">
+					<img class="flyline" src="img/flyline.png" alt="">
+					<a class="btn-lr btn-prev5 btn-prev5b" href="javascript:;" title=""></a>
+   					<a class="btn-lr btn-next5 btn-next5b" href="javascript:;" title=""></a>
+					<div class="swiper5 swiper-container swiper5b">
+						<div class="swiper-wrapper" id="fmktcourse">
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">11111如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper5-nav">
+					<img class="flyline" src="img/flyline.png" alt="">
+					<a class="btn-lr btn-prev5 btn-prev5a" href="javascript:;" title=""></a>
+   					<a class="btn-lr btn-next5 btn-next5a" href="javascript:;" title=""></a>
+					<div class="swiper5 swiper-container swiper5a">
+						<div class="swiper-wrapper" id="kxyecourse">
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">22222如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">22222如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+							<div class="swiper-slide">
+								<dl>
+									<dt>
+										<a href="javascript:;" title="">
+											<img src="pic/picst5.png" alt="">
+										</a>
+									</dt>
+									<dd>
+										<a href="javascript:;" title="">22222如何和孩子沟通</a>
+									</dd>
+									<dd class="ico-clip"></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section st6">
+			<div class="wrapper">
+				<i class="abs plane plane5"></i>
+				<div class="btit st6-btit clearfix">
+					<h2><img src="img/title.png" alt=""></h2>
+					<a class="bmore fr" href="javascript:;" title="">更多 <em>&gt;&gt;</em></a>
+				</div>
+				<div class="st6-main">
+					<ul class="st6list clearfix" id="forumsHot">
+						{% for item in forumIndex.items%}
+					  <li>
+							<a href="http://forum-web.beta.web.sdp.101.com/baby#/forumBoardContent/{{item.id}}" title="">
+								<div class="img-bord">
+									<img src="http://betacs.101.com/v0.1/download?dentryId={{item.image_id}}&size=80" alt="">
+								</div>
+								<span>{{item.name}}</span>
+							</a>
+						</li>
+						{% endfor %}
+					</ul>
+					<div class="sw6-bg">
+						<div class="swiper6-nav">
+							<a class="btn-lr btn-prev6" href="javascript:;" title="">&lt;</a>
+						  <a class="btn-lr btn-next6" href="javascript:;" title="">	&gt;</a>
+							<div class="swiper6 swiper-container">
+								<div class="swiper-wrapper" id="hotSwiper">
+									{% for item in forumIndex.items%}
+									<div class="swiper-slide clearfix">
+										<div class="intd fl">
+											<img src="http://betacs.101.com/v0.1/download?dentryId={{item.image_id}}&size=80" alt="">
+											<h4>{{item.name}}</h4>
+											<p><i></i>{{item.member_num}}</p>
+										</div>
+										<div class="resp fl">
+											{{item.threadInfoList.length}}
+											{% for userpost in item.threadInfoList.items%}
+											<a href="javascript:;" title="">
+												<dl class="clearfix">
+													<dt class="fl">
+														<img src="http://image.101.com/baby/img/ico-tx-man.png" alt="">
+													</dt>
+													<dd class="fl">
+														<p class="auth"><em>admin</em>{{userpost.title}}</p>
+														<p class="pcor info">
+															<span class="comment">52</span>
+															<span class="zan">336</span>
+														</p>
+														<p class="pcor auth-oth"><em>用户2</em>回复：春天到了</p>
+													</dd>
+												</dl>
+											</a>
+											{% endfor %}
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}

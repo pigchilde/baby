@@ -1,10 +1,11 @@
 'use strict';
 
 module.exports = app => {
-  class NewsService extends app.Service{
+  class NewsService extends app.Service {
 
     //封装通用的请求方法
-    * request(url, opts){
+    *
+    request(url, opts) {
       url = `${this.ctx.app.config.serviceRoot.news}${url}`;
       opts = Object.assign({
         timeout: ['30s', '30s'],
@@ -18,7 +19,8 @@ module.exports = app => {
     }
 
     //获取首页新闻数据
-    * newsIndexList(params){
+    *
+    newsIndexList(params) {
       const result = yield this.request('/v0.1/news/', {
         data: params,
       });
@@ -30,7 +32,7 @@ module.exports = app => {
     //封装接口统一调用结果处理
     checkSuccess(result) {
       if (result.status !== 200) {
-        const errorMsg = result.data && result.data.message? result.data.message : 'unknown error';
+        const errorMsg = result.data && result.data.message ? result.data.message : 'unknown error';
         //this.ctx.throw(result.status, errorMsg);
       }
       if (!result.data.success) {

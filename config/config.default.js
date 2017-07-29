@@ -7,9 +7,15 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1500453534253_2512';
 
   //组织名称
-  config.orgname = 'fjsygzxx';
+  config.orgname = 'v_org_k12_integra';
 
-  // add your config here
+  //View
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.html': 'nunjucks',
+    },
+  };
 
   return config;
 };
